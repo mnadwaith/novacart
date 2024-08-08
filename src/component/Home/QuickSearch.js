@@ -20,7 +20,7 @@ const QuickSearch = () => {
         <>
             <h3 className='my-3 mx-3'>Quick Search</h3>
 
-            <div class="row mx-3">
+            <div className="row mx-3">
                 <QuickDisplay searchData={quickSearch} />
             </div>
         </>
