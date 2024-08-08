@@ -1,0 +1,82 @@
+#banner {
+    height: 450px;
+    text-align: center;
+    background-image: url(https://i.ibb.co/JvFCr0H/banner.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 20px;
+}
+
+#anime_title {
+    color: #893164;
+    text-align: center;
+    font-size: 250px;
+    margin-left: 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.anime_letter {
+    display: inline-block;
+    animation: wave_effect 1s ease-in-out infinite forwards; 
+}
+
+/* Animetion */
+.anime_letter:nth-child(1){
+    animation-delay: 0s;
+}
+.anime_letter:nth-child(2){
+    animation-delay: 0.2s;
+}
+.anime_letter:nth-child(3){
+    animation-delay: 0.4s;
+}
+.anime_letter:nth-child(4){
+    animation-delay: 0.6s;
+}
+.anime_letter:nth-child(5){
+    animation-delay: 0.8s;
+}
+.anime_letter:nth-child(6){
+    animation-delay: 1s;
+}
+.anime_letter:nth-child(7){
+    animation-delay: 1.2s;
+}
+.anime_letter:nth-child(8){
+    animation-delay: 1.4s;
+}
+
+@keyframes wave_effect {
+    0%, 100% {
+        transform: translateY(0em);
+    }
+    50% {
+        transform: translateY(-0.2em);
+    }
+}
+
+@media (max-width: 1220px){
+    #anime_title {
+        font-size: 150px;
+    }
+}
+
+@media (max-width: 768px) {
+    #banner {
+        height: auto;
+        padding: 40px 0;
+    }
+
+    #anime_title {
+        font-size: 100px;
+    }
+}
+
+@media (max-width:576px) {
+    #anime_title {
+        font-size: 50px;
+    }
+}
