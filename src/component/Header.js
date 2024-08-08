@@ -12,7 +12,7 @@ const Header = () => {
                     </button>
 
                     <div className="collapse navbar-collapse d-lg-flex" id="navbarsExample11">
-                        <Link id="title_name" className="navbar-brand col-lg-3 me-0" to="/">BingeBox</Link>
+                        <Link id="title_name" className="navbar-brand col-lg-3 me-0" to="/">NovaCart</Link>
                         <ul className="navbar-nav col-lg-6 justify-content-lg-center">
                             <li className="nav-item">
                                 <Link className="nav-link active" aria-current="page" to="/">Home</Link>

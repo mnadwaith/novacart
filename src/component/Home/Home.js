@@ -1,12 +1,12 @@
 import React from 'react';
 import Banner from './Banner';
-import Recommendation from './Recommendation';
+import QuickSearch from './QuickSearch';
 
 const Home = () => {
     return (
         <>
             <Banner />
-            <Recommendation />
+            <QuickSearch />
         </>
     )
 }

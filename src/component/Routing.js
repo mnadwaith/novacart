@@ -5,7 +5,7 @@ import Header from './Header';
 import Footer from './Footer';
 import Home from './Home/Home';
 import Main from './main';
-import Listing from './listing/listingComponet'
+
 
 const Routing = () => {
     return (
@@ -16,7 +16,6 @@ const Routing = () => {
                     <Route path='/' element={<Main />}>
                         <Route index element={<Home />} />
                         <Route path="home" element={<Home />} />
-                        <Route path="shows" element={<Listing />} />
                     </Route>
                 </Routes>
                 <Footer />
