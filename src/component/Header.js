@@ -18,13 +18,7 @@ const Header = () => {
                                 <Link className="nav-link active" aria-current="page" to="/">Home</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to="/shows">All</Link>
-                            </li>
-                            <li className="nav-item">
-                                <Link className="nav-link" to={`/shows?type=movie`}>Movies</Link>
-                            </li>
-                            <li className="nav-item">
-                                <Link className="nav-link" to={`/shows?type=series`}>Series</Link>
+                                <Link className="nav-link" to="/items">Browse</Link>
                             </li>
                         </ul>
                         <div className="d-lg-flex col-lg-3 justify-content-lg-end">
