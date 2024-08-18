@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useParams,Link } from "react-router-dom";
+import './placeOrder.css'
 
 
 const PlaceOrder = () =>{
@@ -35,7 +36,7 @@ const PlaceOrder = () =>{
     return(
 
         <>
-            <div className="container">
+            <div className="container" id="placeoder">
                 <hr/>
                 <div className="panel panel-primary">
                     <div className="panel-heading">

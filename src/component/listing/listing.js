@@ -3,6 +3,9 @@ import ListingDisplay from "./listingDisplay";
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import './listing.css';
+import TypeFilter from "../filters/typeFilter";
+
+
 
 const categories = {
     electronics: "http://localhost:9110/electronics",
@@ -48,7 +51,7 @@ const Listing = () => {
     }, []);
 
     return (
-        <>
+        <>  
             <div id="mainContainer">
                 {window.innerWidth <= 768 && (
                     <button
@@ -59,7 +62,7 @@ const Listing = () => {
                     </button>
                 )}
                 <div id="filter" className={`sidebar ${sidebarOpen ? 'open' : ''}`}>
-                    {/* Filter content here */}
+                    <TypeFilter/>
                 </div>
                 <div id="listingContainer">
                     <ListingDisplay items={items} />
