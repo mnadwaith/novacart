@@ -7,8 +7,7 @@
 #filter {
     width: 25%; /* 25% of the width for the filter */
     padding: 20px;
-    background-color: #fff;
-    box-shadow: 20px 10px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 20px 20px 10px rgba(0, 0, 0, 0.488);
     overflow-y: auto; /* Scrollable if content overflows */
 }
 
@@ -45,7 +44,7 @@
         width: 80%; /* Adjust width as needed */
         max-width: 300px; /* Maximum width of the sidebar */
         height: 100%;
-        background-color: #fff;
+        background-color: #000000;
         box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
         overflow-y: auto;
         transition: transform 0.3s ease;

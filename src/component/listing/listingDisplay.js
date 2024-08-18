@@ -9,12 +9,12 @@ const ListingDisplay = ({ items }) => {
         navigate(`/placeOrder/${itemName}`)
     }
 
-    if (items) {
+    if (items && items.length>0) {
         return (
             <>
                 {items.map((item, index) => (
 
-                    <div class="card" style={{ width: "18rem" }} key={item.id || index}>
+                    <div class="card" style={{ width: "18rem", height:"fit-content" }} key={item.id || index}>
                         <img src="..." class="card-img-top" alt="..." />
                         <div class="card-body">
                             <h5 class="card-title">{item.name}</h5>
@@ -25,6 +25,10 @@ const ListingDisplay = ({ items }) => {
 
                 ))}
             </>
+        )
+    }else{
+        return(
+            <h2>No Items Found</h2>
         )
     }
 }

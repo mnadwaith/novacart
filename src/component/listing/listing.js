@@ -3,7 +3,7 @@ import ListingDisplay from "./listingDisplay";
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import './listing.css';
-import TypeFilter from "../filters/typeFilter";
+import CostFilter from '../filters/costFilter'
 
 
 
@@ -62,7 +62,7 @@ const Listing = () => {
                     </button>
                 )}
                 <div id="filter" className={`sidebar ${sidebarOpen ? 'open' : ''}`}>
-                    <TypeFilter/>
+                    <CostFilter filter={categories[link]} itemPerCost={(data)=> {setItems(data)}}/>
                 </div>
                 <div id="listingContainer">
                     <ListingDisplay items={items} />
