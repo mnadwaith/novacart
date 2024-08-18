@@ -1,0 +1,24 @@
+#mainContainer {
+    display: flex;
+    height: 100vh; /* Full viewport height */
+}
+
+#filter {
+    width: 25%; /* 25% of the width for the filter */
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 20px 10px 5px rgba(0, 0, 0, 0.1);
+    overflow-y: auto; /* Scrollable if content overflows */
+}
+
+#listingContainer {
+    width: 75%; /* 75% of the width for the listing display */
+    padding: 20px;
+    overflow-y: auto; /* Scrollable if content overflows */
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    gap: 20px; /* Space between items */
+}
+
+
+

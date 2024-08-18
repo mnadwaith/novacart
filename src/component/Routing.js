@@ -5,6 +5,7 @@ import Header from './Header';
 import Footer from './Footer';
 import Home from './Home/Home';
 import Main from './main';
+import Listing from './listing/listing';
 
 
 const Routing = () => {
@@ -16,6 +17,7 @@ const Routing = () => {
                     <Route path='/' element={<Main />}>
                         <Route index element={<Home />} />
                         <Route path="home" element={<Home />} />
+                        <Route path="/:link" element={<Listing/>} />
                     </Route>
                 </Routes>
                 <Footer />
