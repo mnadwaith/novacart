@@ -1,3 +1,4 @@
+/* Default layout (desktop) */
 #mainContainer {
     display: flex;
     height: 100vh; /* Full viewport height */
@@ -20,5 +21,53 @@
     gap: 20px; /* Space between items */
 }
 
+/* Mobile layout */
+@media (max-width: 768px) {
+    #mainContainer {
+        flex-direction: column;
+    }
 
+    #filter {
+        width: 100%;
+        box-shadow: none; /* Optional: remove shadow on mobile */
+        padding: 10px;
+    }
 
+    #listingContainer {
+        width: 100%;
+    }
+
+    /* Sidebar style for mobile */
+    .sidebar {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 80%; /* Adjust width as needed */
+        max-width: 300px; /* Maximum width of the sidebar */
+        height: 100%;
+        background-color: #fff;
+        box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+        overflow-y: auto;
+        transition: transform 0.3s ease;
+        transform: translateX(100%); /* Initially hidden */
+        z-index: 1;
+    }
+
+    .sidebar.open {
+        transform: translateX(0); /* Slide in when open */
+    }
+
+    /* Button to open sidebar (only visible on mobile) */
+    .open-sidebar-btn {
+        display: block;
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        z-index: 1000; /* Ensure button is above other content */
+    }
+}

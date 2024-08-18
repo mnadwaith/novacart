@@ -6,6 +6,7 @@ import Footer from './Footer';
 import Home from './Home/Home';
 import Main from './main';
 import Listing from './listing/listing';
+import PlaceOrder from './Orders/placeOrder';
 
 
 const Routing = () => {
@@ -18,6 +19,7 @@ const Routing = () => {
                         <Route index element={<Home />} />
                         <Route path="home" element={<Home />} />
                         <Route path="/:link" element={<Listing/>} />
+                        <Route path="placeOrder/:itemName" element={<PlaceOrder/>} />
                     </Route>
                 </Routes>
                 <Footer />
