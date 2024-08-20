@@ -1,43 +1,55 @@
 import React, { useState } from "react";
-import { useParams,Link } from "react-router-dom";
+import { useParams, Link, useNavigate } from "react-router-dom";
 import './placeOrder.css'
 
+const orderUrl = "http://localhost:9811/orders"
 
-const PlaceOrder = () =>{
+const PlaceOrder = () => {
+
 
     let parems = useParams();
+    let navigate = useNavigate();
     let [backLink] = useState(sessionStorage.getItem('link'))
 
     const initialValues = {
-        id:Math.floor(Math.random()),
+        id: Math.floor(Math.random()),
         item_name: parems.itemName,
-        orderId: `SIO ${Math.floor(Math.random()*(209900-49100)+49100)}`,
-        name:'',
-        email:'',
-        cost:Math.floor(Math.random()*(2000-400)+400),
-        phone:'',
+        orderId: `SIO ${Math.floor(Math.random() * (209900 - 49100) + 49100)}`,
+        name: '',
+        email: '',
+        cost: Math.floor(Math.random() * (2000 - 400) + 400),
+        phone: '',
         address: "Home Noida"
     }
 
-    const handleInputChange = (e) =>{
-        const {name,value} = e.target;
+    const handleInputChange = (e) => {
+        const { name, value } = e.target;
         setValues({
             ...values,
-            [name]:value
+            [name]: value
         })
     }
 
-    const checkOut = () =>{
+    const checkOut = () => {
         console.log(values)
+        fetch(orderUrl, {
+            method: 'POST',
+            headers: {
+                'accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(values)
+        })
+            .then(navigate('/viewOrder'))
     }
 
-    const [values,setValues] = useState(initialValues)
+    const [values, setValues] = useState(initialValues)
 
-    return(
+    return (
 
         <>
             <div className="container" id="placeoder">
-                <hr/>
+                <hr />
                 <div className="panel panel-primary">
                     <div className="panel-heading">
                         <h3>Order for {parems.itemName} </h3>
@@ -46,23 +58,23 @@ const PlaceOrder = () =>{
                         <div className="row">
                             <div className="col-md-12 mt-2 form-group">
                                 <label htmlFor="fname" className="control-label">Order ID</label>
-                                <input className="form-control border-dark" id="orderId" name="orderId" value={values.orderId} readOnly/>
+                                <input className="form-control border-dark" id="orderId" name="orderId" value={values.orderId} readOnly />
                             </div>
                             <div className="col-md-6 mt-2 form-group">
                                 <label htmlFor="fname" className="control-label">Name</label>
-                                <input className="form-control" id="fname" name="name" value={values.name} onChange={handleInputChange}/>
+                                <input className="form-control" id="fname" name="name" value={values.name} onChange={handleInputChange} />
                             </div>
                             <div className="col-md-6 mt-2 form-group">
                                 <label htmlFor="fname" className="control-label">Email</label>
-                                <input className="form-control" id="email" name="email" value={values.email} onChange={handleInputChange}/>
+                                <input className="form-control" id="email" name="email" value={values.email} onChange={handleInputChange} />
                             </div>
                             <div className="col-md-6 mt-2 form-group">
                                 <label htmlFor="fname" className="control-label">Phone</label>
-                                <input className="form-control" id="phone" name="phone" value={values.phone} onChange={handleInputChange}/>
+                                <input className="form-control" id="phone" name="phone" value={values.phone} onChange={handleInputChange} />
                             </div>
                             <div className="col-md-6 mt-2 form-group">
                                 <label htmlFor="fname" className="control-label">Address</label>
-                                <input className="form-control" id="address" name="address" value={values.address} onChange={handleInputChange}/>
+                                <input className="form-control" id="address" name="address" value={values.address} onChange={handleInputChange} />
                             </div>
                         </div>
 

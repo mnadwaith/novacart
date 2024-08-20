@@ -7,7 +7,7 @@ const CostFilter = (props) =>{
         let costRange = event.target.value
         let url = props.filter
         let costUrl =""
-        if(costRange ==""){
+        if(costRange ===""){
             costUrl = url
         }else{
             let [min,max] = costRange.split('-')

@@ -7,6 +7,7 @@ import Home from './Home/Home';
 import Main from './main';
 import Listing from './listing/listing';
 import PlaceOrder from './Orders/placeOrder';
+import ViewOrder from './Orders/viewOrder';
 
 
 const Routing = () => {
@@ -20,6 +21,7 @@ const Routing = () => {
                         <Route path="home" element={<Home />} />
                         <Route path="/:link" element={<Listing/>} />
                         <Route path="placeOrder/:itemName" element={<PlaceOrder/>} />
+                        <Route path="viewOrder" element={<ViewOrder/>} />
                     </Route>
                 </Routes>
                 <Footer />
