@@ -19,9 +19,9 @@ const Routing = () => {
                     <Route path='/' element={<Main />}>
                         <Route index element={<Home />} />
                         <Route path="home" element={<Home />} />
-                        <Route path="/:link" element={<Listing/>} />
-                        <Route path="placeOrder/:itemName" element={<PlaceOrder/>} />
-                        <Route path="viewOrder" element={<ViewOrder/>} />
+                        <Route path="/:link" element={<Listing />} />
+                        <Route path="placeOrder/:itemName" element={<PlaceOrder />} />
+                        <Route path="viewOrder" element={<ViewOrder />} />
                     </Route>
                 </Routes>
                 <Footer />

@@ -23,7 +23,7 @@ const Listing = () => {
     const [sidebarOpen, setSidebarOpen] = useState(false);
 
     useEffect(() => {
-        sessionStorage.setItem('link',link)
+        sessionStorage.setItem('link', link)
         const url = categories[link];
         if (url) {
             axios.get(url)
@@ -51,7 +51,7 @@ const Listing = () => {
     }, []);
 
     return (
-        <>  
+        <>
             <div id="mainContainer">
                 {window.innerWidth <= 768 && (
                     <button
@@ -62,7 +62,7 @@ const Listing = () => {
                     </button>
                 )}
                 <div id="filter" className={`sidebar ${sidebarOpen ? 'open' : ''}`}>
-                    <CostFilter filter={categories[link]} itemPerCost={(data)=> {setItems(data)}}/>
+                    <CostFilter filter={categories[link]} itemPerCost={(data) => { setItems(data) }} />
                 </div>
                 <div id="listingContainer">
                     <ListingDisplay items={items} />

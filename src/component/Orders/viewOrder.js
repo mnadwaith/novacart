@@ -13,7 +13,7 @@ const ViewOrder = () => {
             .then((res) => {
                 setOrders(res.data)
             })
-    },[orders])
+    }, [orders])
 
     return (
         <>

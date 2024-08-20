@@ -3,7 +3,7 @@ import React from "react";
 const DisplayOrders = ({ orderData }) => {
     if (orderData && orderData.length > 0) {
 
-        
+
 
         return (
             <div className="container">
