@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 import QuickDisplay from './QuickDisplay'
 
-const url = 'http://localhost:9110/catagories'
+const url = 'https://novacartapi.onrender.com/catagories'
 
 const QuickSearch = () => {
 

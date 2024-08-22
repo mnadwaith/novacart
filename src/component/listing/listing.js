@@ -8,13 +8,13 @@ import CostFilter from '../filters/costFilter'
 
 
 const categories = {
-    electronics: "http://localhost:9110/electronics",
-    fashion: "http://localhost:9110/fashion",
-    home_kitchen: "http://localhost:9110/home_kitchen",
-    sports_outdoor: "http://localhost:9110/sports_outdoor",
-    toys_games: "http://localhost:9110/toys_games",
-    beauty_personal_care: "http://localhost:9110/beauty_personal_care",
-    items: "http://localhost:9110/items"
+    electronics: "https://novacartapi.onrender.com/electronics",
+    fashion: "https://novacartapi.onrender.com/fashion",
+    home_kitchen: "https://novacartapi.onrender.com/home_kitchen",
+    sports_outdoor: "https://novacartapi.onrender.com/sports_outdoor",
+    toys_games: "https://novacartapi.onrender.com/toys_games",
+    beauty_personal_care: "https://novacartapi.onrender.com/beauty_personal_care",
+    items: "https://novacartapi.onrender.com/items"
 };
 
 const Listing = () => {

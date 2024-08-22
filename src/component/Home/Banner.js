@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import BannerDisplay from './BannerDisplay';
 
-const url = "http://localhost:9110/banner"
+const url = "https://novacartapi.onrender.com/banner"
 
 
 const Banner = () => {
