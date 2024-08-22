@@ -13,7 +13,14 @@ const BannerDisplay = ({ bannerData }) => {
             </>
         )
     } else {
-        <h2>No data</h2>
+        return (
+            <>
+                <div className="container text-center">
+                    <img src="https://i.ibb.co/fp04DCk/loading.gif" alt="loading" border="0" />
+                    <h2>Loading....</h2>
+                </div>
+            </>
+        )
     }
 }
 

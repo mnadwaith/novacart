@@ -22,8 +22,9 @@ const Header = () => {
                             </li>
                         </ul>
                         <div className="d-lg-flex col-lg-3 justify-content-lg-end">
-                            <button className="btn btn-outline-primary me-2">Log In</button>
-                            <button className="btn btn-primary">Sign Up</button>
+                            {/* <button className="btn btn-outline-primary me-2">Log In</button>
+                            <button className="btn btn-primary">Sign Up</button> */}
+                            <Link className="btn btn-outline-primary" to="/viewOrder">View Orders</Link>
                         </div>
                     </div>
                 </div>

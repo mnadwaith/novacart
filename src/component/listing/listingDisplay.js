@@ -1,8 +1,17 @@
-import React from "react";
+import React ,{ useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 
 const ListingDisplay = ({ items }) => {
+
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setLoading(false);
+        }, 2000); // 2000 milliseconds = 2 seconds
+        return () => clearTimeout(timer);
+    }, []);
 
     let navigate = useNavigate()
     const proceed = (itemName) => {
@@ -28,7 +37,18 @@ const ListingDisplay = ({ items }) => {
         )
     } else {
         return (
-            <h2>No Items Found</h2>
+            <>
+                <div className="container text-center">
+                {loading ? (
+                <>
+                    <img src="https://i.ibb.co/fp04DCk/loading.gif" alt="loading" border="0" />
+                    <h2>Loading....</h2>
+                </>
+            ) : (
+                <h2>No Data Found</h2>
+            )}
+                </div>
+            </>
         )
     }
 }

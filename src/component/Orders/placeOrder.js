@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
 import './placeOrder.css'
 
-const orderUrl = "http://localhost:9811/orders"
+const orderUrl = "https://novacartapi.onrender.com/placeOrder"
 
 const PlaceOrder = () => {
 

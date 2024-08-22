@@ -16,6 +16,15 @@ const QuickDisplay = ({ searchData }) => {
                 ))}
             </>
         )
+    }else {
+        return (
+            <>
+                <div className="container text-center">
+                    <img src="https://i.ibb.co/fp04DCk/loading.gif" alt="loading" border="0" />
+                    <h2>Loading....</h2>
+                </div>
+            </>
+        )
     }
 }
 

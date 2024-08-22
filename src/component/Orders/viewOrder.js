@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from 'axios';
 import DisplayOrders from "./displayOrders";
 
-const url = "http://localhost:9811/orders"
+const url = "https://novacartapi.onrender.com/viewOrder"
 
 const ViewOrder = () => {
 
