@@ -7,14 +7,12 @@ const DisplayOrders = ({ orderData }) => {
 
 
             return (
-                <div className="container">
+                <div className="container-fluid">
                     <center><h3>Orders</h3></center>
                     <table className="table table-bordered">
                         <thead>
                             <tr>
                                 <th>Order Id</th>
-                                <th>Name</th>
-                                <th>Email</th>
                                 <th>Item Name</th>
                                 <th>Cost</th>
                                 <th>Address</th>
@@ -25,8 +23,6 @@ const DisplayOrders = ({ orderData }) => {
                             {orderData.map((item, index) => (
                                 <tr key={index}>
                                     <td>{item.orderId}</td>
-                                    <td>{item.name}</td>
-                                    <td>{item.email}</td>
                                     <td>{item.item_name}</td>
                                     <td>{item.cost}</td>
                                     <td>{item.address}</td>
